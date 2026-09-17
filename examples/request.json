@@ -1,0 +1,33 @@
+{
+  "state": "Hi, I ordered a pair of running shoes (order #48213) on May 3rd and paid twice by mistake: my bank statement shows two charges of $89.90. I only received one pair. Could you refund the duplicate charge? I'd also like to know when the order was shipped. Thanks, Laura",
+  "model": "jev-latest",
+  "questions": {
+    "is_refund_request": {
+      "type": "noul",
+      "instructions": "Is the customer explicitly asking for a refund?",
+      "criteria": {
+        "true": "The message asks for money back, a refund, or reversal of a charge.",
+        "false": "No refund is requested, even if a payment problem is described."
+      }
+    },
+    "intent": {
+      "type": "choice",
+      "instructions": "What is the main intent of the message?",
+      "criteria": {
+        "billing_issue": "A payment, charge or invoice problem.",
+        "shipping_status": "A question about delivery or tracking.",
+        "product_complaint": "The product is defective, wrong or unsatisfactory.",
+        "other": "Anything else."
+      }
+    },
+    "urgency": {
+      "type": "score",
+      "instructions": "How urgent is this message?",
+      "criteria": [
+        "Not urgent: informational, no deadline.",
+        "Moderate: a problem that should be handled within days.",
+        "High: money, safety or a hard deadline is involved."
+      ]
+    }
+  }
+}

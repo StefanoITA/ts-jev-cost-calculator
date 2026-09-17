@@ -1,0 +1,21 @@
+name: Question or idea
+description: Ask how to use the tool or propose an improvement.
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Questions about the TypeSafe service itself (pricing, limits, account, model behaviour) should go to the provider: this project is unofficial and cannot answer them. Never paste API keys or real customer data.
+  - type: textarea
+    id: q
+    attributes:
+      label: Your question or idea
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: This post contains no API keys, credentials, real customer data, or contractual pricing information.
+          required: true

@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ts-jev-cost-calculator"
+version = "1.0.0"
+description = "Unofficial estimator of input/output tokens, cost and context limits for TypeSafe (System One / Jev) API requests. Not affiliated with TypeSafe."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Stefano Serafini" }]
+keywords = ["typesafe", "jev", "system-one", "tokens", "cost", "estimator"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Utilities",
+]
+dependencies = ["tokenizers>=0.15"]
+
+[project.optional-dependencies]
+# "proxy" is kept for backward compatibility: the precise mode is now installed by default.
+proxy = ["tokenizers>=0.15"]
+
+[project.urls]
+Homepage = "https://github.com/StefanoITA/ts-jev-cost-calculator"
+Repository = "https://github.com/StefanoITA/ts-jev-cost-calculator"
+
+[project.scripts]
+ts-jev-cost-calculator = "ts_jev_cost_calculator.cli:main"
+tscost = "ts_jev_cost_calculator.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ts_jev_cost_calculator"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/ts_jev_cost_calculator", "examples", "tests", "README.md", "LICENSE", "NOTICE", "DISCLAIMER.md", "CHANGELOG.md", "SECURITY.md", "CONTRIBUTING.md", "pyproject.toml", "install.sh"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

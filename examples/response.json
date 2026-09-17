@@ -1,0 +1,39 @@
+{
+  "model": "jev-1.13.0",
+  "answers": {
+    "is_refund_request": {
+      "type": "noul",
+      "noul": 0.99
+    },
+    "intent": {
+      "type": "choice",
+      "choice": "billing_issue",
+      "confidence": 1.0,
+      "probabilities": {
+        "shipping_status": 0.0,
+        "billing_issue": 1.0,
+        "other": 0.0,
+        "product_complaint": 0.0
+      }
+    },
+    "urgency": {
+      "type": "score",
+      "score": 1.57,
+      "confidence": 0.36,
+      "legend": {
+        "0": "Not urgent: informational, no deadline.",
+        "1": "Moderate: a problem that should be handled within days.",
+        "2": "High: money, safety or a hard deadline is involved."
+      },
+      "probabilities": {
+        "0": 0.0,
+        "1": 0.42,
+        "2": 0.58
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 561,
+    "output_tokens": 85
+  }
+}

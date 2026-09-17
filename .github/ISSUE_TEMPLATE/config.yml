@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security issue
+    url: https://github.com/StefanoITA/ts-jev-cost-calculator/security/advisories/new
+    about: Report a security problem privately instead of opening a public issue.
+  - name: Trademark or content concern
+    url: https://github.com/StefanoITA/ts-jev-cost-calculator/blob/main/DISCLAIMER.md
+    about: Rights holders, please read the takedown section and open a "Content concern" issue; it will be handled promptly.

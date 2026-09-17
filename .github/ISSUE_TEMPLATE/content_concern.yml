@@ -1,0 +1,14 @@
+name: Content concern
+description: For rights holders or the service provider, about names, marks, or content in this repository.
+labels: ["content-concern"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This project is independent and unofficial. If you represent a rights holder and consider any part of this repository inappropriate, describe it here: the project will be renamed or the content removed promptly and without dispute, as stated in DISCLAIMER.md.
+  - type: textarea
+    id: concern
+    attributes:
+      label: What should be changed or removed, and why
+    validations:
+      required: true

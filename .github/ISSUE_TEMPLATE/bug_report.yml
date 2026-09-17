@@ -1,0 +1,45 @@
+name: Bug report
+description: The estimator gives a wrong result, crashes, or fails to install.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Before you post, please read these three rules:
+        - **Never paste API keys, credentials, invoices, or the pricing terms of your own contract.**
+        - **Do not paste real customer data.** Use a fictional request that reproduces the problem.
+        - This is an unofficial estimator, not affiliated with TypeSafe. Estimates are not billing information; issues about what the service charged you belong to the provider's support, not here.
+  - type: input
+    id: version
+    attributes:
+      label: Version and mode
+      description: Output of `tscost info`.
+      placeholder: ts-jev-cost-calculator 1.0.0, mode proxy
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Command or code you ran, what you got, what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: request
+    attributes:
+      label: Minimal fictional request that reproduces it
+      description: A small JSON request with made-up content. No real data, no keys.
+      render: json
+  - type: input
+    id: real
+    attributes:
+      label: Real `usage` values, if the report is about accuracy
+      description: The `input_tokens` / `output_tokens` the API returned for that same request (numbers only).
+      placeholder: input_tokens=561 output_tokens=85
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: This report contains no API keys, credentials, real customer data, or contractual pricing information.
+          required: true

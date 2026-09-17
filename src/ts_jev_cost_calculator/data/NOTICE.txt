@@ -1,0 +1,3 @@
+qwen2.5-tokenizer.json: tokenizer of Qwen/Qwen2.5-7B (Alibaba Cloud), Apache License 2.0, downloaded from Hugging Face on 2026-09-17.
+Used only as a proxy tokenizer for token estimation; corrected by the regression coefficients in cost_model.json.
+cost_model.json: coefficients fitted on 1,364 real TypeSafe API requests measured on 2026-09-17 (jev-1.13.0).
